@@ -10,7 +10,15 @@
     tools:context="com.tistory.dwfox.dwrulerview.MainActivity">
 
     <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
+    <com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker
+        android:id="@+id/myScrollingValuePicker"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+    </com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker>
 </RelativeLayout>

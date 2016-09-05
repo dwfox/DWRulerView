@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DWRulerView.iml" filepath="$PROJECT_DIR$/DWRulerView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DWRulerView.iml" filepath="$PROJECT_DIR$/DWRulerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dwrulerviewlibrary/dwrulerviewlibrary.iml" filepath="$PROJECT_DIR$/dwrulerviewlibrary/dwrulerviewlibrary.iml" />
     </modules>
   </component>
 </project>
