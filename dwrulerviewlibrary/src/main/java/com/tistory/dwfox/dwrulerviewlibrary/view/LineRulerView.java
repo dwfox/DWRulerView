@@ -15,8 +15,9 @@ import android.view.View;
 import com.tistory.dwfox.dwrulerviewlibrary.utils.DWUtils;
 
 /**
- * Created by DW on 2016-08-31.
+ * Created by DWFOX on 2016-08-31.
  */
+
 public class LineRulerView extends View {
 
     private Paint paint;
@@ -32,6 +33,18 @@ public class LineRulerView extends View {
 
     private int viewHeight = 0;
     private int viewWidth = 0;
+
+    private int showRangeValue = 5;
+
+    private int valueMultiple = 1;
+
+    // 1  5개마다 ( Default)
+    // 2  특정 배수 마다
+    private int displayNumberType = 1;
+
+    public static final int DISPLAY_NUMBER_TYPE_SPACIAL_COUNT = 1;
+    public static final int DISPLAY_NUMBER_TYPE_MULTIPLE = 2;
+    private int valueTypeMultiple = 5;
 
 
     public LineRulerView(Context context) {
@@ -65,7 +78,7 @@ public class LineRulerView extends View {
         textPaint = new Paint();
         textPaint.setColor(0xFFFFFFFF);
         textPaint.isAntiAlias();
-        textPaint.setTextSize(DWUtils.sp2px(context, 16));
+        textPaint.setTextSize(DWUtils.sp2px(context, 14));
         textPaint.setTextAlign(Paint.Align.CENTER);
 
         invalidate();
@@ -81,6 +94,17 @@ public class LineRulerView extends View {
         return this;
     }
 
+    public LineRulerView setValueMultiple(int valueMultiple) {
+        this.valueMultiple = valueMultiple;
+        return this;
+    }
+
+    public void setMultipleTypeValue(int valueTypeMultiple) {
+        this.displayNumberType = DISPLAY_NUMBER_TYPE_MULTIPLE;
+        this.valueTypeMultiple = valueTypeMultiple;
+    }
+
+
     @Override
     protected void onDraw(Canvas canvas) {
         viewHeight = getMeasuredHeight();
@@ -94,24 +118,27 @@ public class LineRulerView extends View {
         canvas.drawLine(0, 0, 0, viewHeight / 5 * 2, paint);
 
         for (int i = 1; i < (MAX_DATA - MIN_DATA); i++) {
-            if (i % 5 == 0) {
-                canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 5 * 3, paint);
-                canvas.drawText("" + (int) (i + MIN_DATA), viewInterval * i, viewHeight / 5 * 3 + DWUtils.sp2px(getContext(), 16), textPaint);
+            if (displayNumberType == DISPLAY_NUMBER_TYPE_MULTIPLE) {
+
+                if (((int) (i + MIN_DATA) * valueMultiple) % valueTypeMultiple == 0) {
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 5 * 3, paint);
+                    canvas.drawText("" + ((int) (i + MIN_DATA) * valueMultiple), viewInterval * i, viewHeight / 5 * 3 + DWUtils.sp2px(getContext(), 14), textPaint);
+                } else {
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 10 * 3, paint);
+                }
+
             } else {
-                canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 10 * 3, paint);
+                if (i % 5 == 0) {
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 5 * 3, paint);
+                    canvas.drawText("" + ((int) (i + MIN_DATA) * valueMultiple), viewInterval * i, viewHeight / 5 * 3 + DWUtils.sp2px(getContext(), 14), textPaint);
+                } else {
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 10 * 3, paint);
+                }
             }
         }
         canvas.drawLine(viewWidth, 0, viewWidth, viewHeight / 5 * 2, paint);
 
         super.onDraw(canvas);
     }
-
-
-//    @Override
-//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-//        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//
-//        viewWidth = DWMeasure.getMeasure(widthMeasureSpec);
-//        viewHeight = DWMeasure.getMeasure(heightMeasureSpec);
-//    }
 }
+

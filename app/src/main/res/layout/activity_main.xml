@@ -11,14 +11,18 @@
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Hello World!" />
 
     <com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker
         android:id="@+id/myScrollingValuePicker"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="200dp"
+        android:background="#ec6464">
 
     </com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker>
 </RelativeLayout>
