@@ -22,7 +22,7 @@
         android:id="@+id/myScrollingValuePicker"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_centerInParent="true"
         android:background="#ec6464">
-
     </com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker>
 </RelativeLayout>

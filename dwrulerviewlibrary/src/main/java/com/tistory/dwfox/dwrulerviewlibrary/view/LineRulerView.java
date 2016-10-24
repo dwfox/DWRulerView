@@ -46,6 +46,10 @@ public class LineRulerView extends View {
     public static final int DISPLAY_NUMBER_TYPE_MULTIPLE = 2;
     private int valueTypeMultiple = 5;
 
+    private int longHeightRatio = 10;
+    private int shortHeightRatio = 5;
+    private int baseHeightRatio = 3;
+
 
     public LineRulerView(Context context) {
         super(context);
@@ -115,28 +119,28 @@ public class LineRulerView extends View {
         float viewInterval = (float) viewWidth / (MAX_DATA - MIN_DATA);
 
 
-        canvas.drawLine(0, 0, 0, viewHeight / 5 * 2, paint);
+        canvas.drawLine(0, 0, 0, viewHeight / longHeightRatio * baseHeightRatio, paint);
 
         for (int i = 1; i < (MAX_DATA - MIN_DATA); i++) {
             if (displayNumberType == DISPLAY_NUMBER_TYPE_MULTIPLE) {
 
                 if (((int) (i + MIN_DATA) * valueMultiple) % valueTypeMultiple == 0) {
-                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 5 * 3, paint);
-                    canvas.drawText("" + ((int) (i + MIN_DATA) * valueMultiple), viewInterval * i, viewHeight / 5 * 3 + DWUtils.sp2px(getContext(), 14), textPaint);
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / shortHeightRatio * baseHeightRatio, paint);
+                    canvas.drawText("" + ((int) (i + MIN_DATA) * valueMultiple), viewInterval * i, viewHeight / shortHeightRatio * baseHeightRatio + DWUtils.sp2px(getContext(), 14), textPaint);
                 } else {
-                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 10 * 3, paint);
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / longHeightRatio * baseHeightRatio, paint);
                 }
 
             } else {
                 if (i % 5 == 0) {
-                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 5 * 3, paint);
-                    canvas.drawText("" + ((int) (i + MIN_DATA) * valueMultiple), viewInterval * i, viewHeight / 5 * 3 + DWUtils.sp2px(getContext(), 14), textPaint);
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / shortHeightRatio * baseHeightRatio, paint);
+                    canvas.drawText("" + ((int) (i + MIN_DATA) * valueMultiple), viewInterval * i, viewHeight / shortHeightRatio * baseHeightRatio + DWUtils.sp2px(getContext(), 14), textPaint);
                 } else {
-                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / 10 * 3, paint);
+                    canvas.drawLine(viewInterval * i, 0, viewInterval * i, viewHeight / longHeightRatio * baseHeightRatio, paint);
                 }
             }
         }
-        canvas.drawLine(viewWidth, 0, viewWidth, viewHeight / 5 * 2, paint);
+        canvas.drawLine(viewWidth, 0, viewWidth, viewHeight / longHeightRatio * baseHeightRatio, paint);
 
         super.onDraw(canvas);
     }

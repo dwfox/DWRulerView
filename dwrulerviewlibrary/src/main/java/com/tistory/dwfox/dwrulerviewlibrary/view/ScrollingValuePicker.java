@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -133,9 +134,13 @@ public class ScrollingValuePicker extends FrameLayout {
         Paint paint = new Paint();
         paint.setColor(Color.parseColor("#ffffff"));
         paint.setStrokeWidth(5f);
-        paint.setStyle(Paint.Style.STROKE);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
 
-        canvas.drawLine(0, 0, 100, 100, paint);
+        Path path  = new Path();
+        path.moveTo(getWidth() / 2 - 30, 0);
+        path.lineTo(getWidth() / 2, 40);
+        path.lineTo(getWidth() / 2 + 30, 0);
+        canvas.drawPath(path, paint);
         super.onDraw(canvas);
     }
 
