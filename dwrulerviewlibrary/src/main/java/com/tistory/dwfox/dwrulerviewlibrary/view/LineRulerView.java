@@ -28,8 +28,8 @@ public class LineRulerView extends View {
     private float bigUnitLineHeight = 0f;
     private float samllUnitLineHeight = 0f;
 
-    private float MAX_DATA = 200;
-    private float MIN_DATA = 50;
+    private float MAX_DATA = 100;
+    private float MIN_DATA = 0;
 
     private int viewHeight = 0;
     private int viewWidth = 0;

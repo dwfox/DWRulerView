@@ -15,10 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ScrollingValuePicker myScrollingValuePicker;
 
-    private float MIN_VALUE = 44;
-    private float MAX_VALUE = 150;
-
-    public static final float LINE_RULER_MULTIPLE_SIZE = 5.5f;
+    private static final float MIN_VALUE = 44;
+    private static final float MAX_VALUE = 150;
+    private static final float LINE_RULER_MULTIPLE_SIZE = 5.5f;
     private TextView text;
 
     @Override
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
 
         myScrollingValuePicker
                 .setOnScrollChangedListener(new ObservableHorizontalScrollView.OnScrollChangedListener() {

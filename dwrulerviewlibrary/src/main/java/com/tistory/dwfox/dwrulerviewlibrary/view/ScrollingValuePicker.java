@@ -77,7 +77,6 @@ public class ScrollingValuePicker extends FrameLayout {
     }
 
     public void setValueTypeMultiple(int valueTypeMultiple) {
-
         this.valueMultiple = valueTypeMultiple;
         lineRulerView.setMultipleTypeValue(valueTypeMultiple);
     }
@@ -136,7 +135,7 @@ public class ScrollingValuePicker extends FrameLayout {
         paint.setStrokeWidth(5f);
         paint.setStyle(Paint.Style.FILL_AND_STROKE);
 
-        Path path  = new Path();
+        Path path = new Path();
         path.moveTo(getWidth() / 2 - 30, 0);
         path.lineTo(getWidth() / 2, 40);
         path.lineTo(getWidth() / 2 + 30, 0);
@@ -155,18 +154,15 @@ public class ScrollingValuePicker extends FrameLayout {
             final ViewGroup.LayoutParams leftParams = mLeftSpacer.getLayoutParams();
             leftParams.width = width / 2;
             mLeftSpacer.setLayoutParams(leftParams);
-//            mLeftSpacer.setBackgroundColor(getContext().getResources().getColor(R.color.colorPrimary));
 
             final ViewGroup.LayoutParams rulerViewParams = lineRulerView.getLayoutParams();
             rulerViewParams.width = (int) (width * viewMultipleSize);  // set RulerView Width
             lineRulerView.setLayoutParams(rulerViewParams);
-//            lineRulerView.setBackgroundColor(getContext().getResources().getColor(R.color.colorPrimary));
             lineRulerView.invalidate();
 
 
             final ViewGroup.LayoutParams rightParams = mRightSpacer.getLayoutParams();
             rightParams.width = width / 2;
-//            mRightSpacer.setBackgroundColor(getContext().getResources().getColor(R.color.colorPrimary));
             mRightSpacer.setLayoutParams(rightParams);
 
             invalidate();

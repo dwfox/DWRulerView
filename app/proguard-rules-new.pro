@@ -15,8 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
-
-
--keepclassmembers class com.tistory.dwfox.dwrulerviewlibrary.view.LineRulerView {
-    public *;
+-keepclassmembers class com.tistory.dwfox.dwrulerview.TestClass {
+   public *;
 }
