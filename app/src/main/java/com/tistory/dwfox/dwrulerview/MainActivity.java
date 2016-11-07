@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
 
     private ScrollingValuePicker myScrollingValuePicker;
 
-    private static final float MIN_VALUE = 44;
-    private static final float MAX_VALUE = 150;
-    private static final float LINE_RULER_MULTIPLE_SIZE = 5.5f;
+    private static final float MIN_VALUE = 0;
+    private static final float MAX_VALUE = 100;
+    private static final float LINE_RULER_MULTIPLE_SIZE = 4.5f;
     private TextView text;
 
     @Override
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         myScrollingValuePicker = (ScrollingValuePicker) findViewById(R.id.myScrollingValuePicker);
         myScrollingValuePicker.setViewMultipleSize(LINE_RULER_MULTIPLE_SIZE);
         myScrollingValuePicker.setMaxValue(MIN_VALUE, MAX_VALUE);
-        myScrollingValuePicker.setValueTypeMultiple(10);
+        myScrollingValuePicker.setValueTypeMultiple(5);
         myScrollingValuePicker.getScrollView().setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
