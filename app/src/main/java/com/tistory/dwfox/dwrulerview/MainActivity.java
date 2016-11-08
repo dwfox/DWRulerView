@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final float MIN_VALUE = 0;
     private static final float MAX_VALUE = 100;
-    private static final float LINE_RULER_MULTIPLE_SIZE = 4.5f;
+    private static final float LINE_RULER_MULTIPLE_SIZE = 6.5f;
     private TextView text;
 
     @Override
@@ -46,34 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onScrollChanged(ObservableHorizontalScrollView view, int l, int t) {
-//                        text.setText("Value MOVEING : " +
-//                                DWUtils.getValueAndScrollItemToCenter(myScrollingValuePicker.getScrollView(), l, t, MAX_VALUE, MIN_VALUE, myScrollingValuePicker.getViewMultipleSize()));
                     }
 
                     @Override
                     public void onScrollStopped(int l, int t) {
                         text.setText("Value STOP : " +
-                                DWUtils.getValueAndScrollItemToCenter(myScrollingValuePicker.getScrollView(), l, t, MAX_VALUE, MIN_VALUE, myScrollingValuePicker.getViewMultipleSize()));
+                                DWUtils.getValueAndScrollItemToCenter(myScrollingValuePicker.getScrollView()
+                                        , l
+                                        , t
+                                        , MAX_VALUE
+                                        , MIN_VALUE
+                                        , myScrollingValuePicker.getViewMultipleSize()));
                     }
                 });
-//        myScrollingValuePicker.setOnScrollChangedListener(new ObservableHorizontalScrollView.OnScrollChangedListener() {
-//            @Override
-//            public void onScrollChanged(ObservableHorizontalScrollView view, int l, int t) {
-//
-//                float oneValue = (float) view.getWidth() * 2.5f / (MAX_VALUE - MIN_VALUE);
-//                int value = (int) (l / oneValue) + (int) MIN_VALUE;
-//
-//                Log.d("TEST", "View : view.getWidth() : " + view.getWidth()
-//                        + "\nView : l : " + l
-//                        + "\nView : t : " + t
-//                        + "\noneValue : oneValue : " + oneValue
-//                        + "\nvalue : value : " + value);
-//
-//                if (value > (MAX_VALUE)) value = (int) MAX_VALUE;
-//                else if (value < MIN_VALUE) value = (int) MIN_VALUE;
-//                tv_text.setText("" + value);
-//            }
-//        });
-
     }
 }
