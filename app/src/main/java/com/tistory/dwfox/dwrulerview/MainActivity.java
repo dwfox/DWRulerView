@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        myScrollingValuePicker
-                .setOnScrollChangedListener(new ObservableHorizontalScrollView.OnScrollChangedListener() {
+        myScrollingValuePicker.setOnScrollChangedListener(new ObservableHorizontalScrollView.OnScrollChangedListener() {
 
                     @Override
                     public void onScrollChanged(ObservableHorizontalScrollView view, int l, int t) {

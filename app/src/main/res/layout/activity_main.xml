@@ -22,4 +22,10 @@
         android:layout_centerInParent="true"
         android:background="#ec6464">
     </com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker>
+
+    <com.tistory.dwfox.dwrulerviewlibrary.view.DWRulerSeekbar
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true">
+    </com.tistory.dwfox.dwrulerviewlibrary.view.DWRulerSeekbar>
 </RelativeLayout>
