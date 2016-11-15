@@ -98,6 +98,12 @@ public class LineRulerView extends View {
         return this;
     }
 
+    public LineRulerView setMinMaxValue(float minValue, float maxValue) {
+        this.MIN_DATA = minValue;
+        this.MAX_DATA = maxValue;
+        return this;
+    }
+
     public LineRulerView setValueMultiple(int valueMultiple) {
         this.valueMultiple = valueMultiple;
         return this;
@@ -114,11 +120,7 @@ public class LineRulerView extends View {
         viewHeight = getMeasuredHeight();
         viewWidth = getMeasuredWidth();
 
-        Log.d("##", "viewHeight : " + viewHeight);
-
         float viewInterval = (float) viewWidth / (MAX_DATA - MIN_DATA);
-
-
         canvas.drawLine(0, 0, 0, viewHeight / longHeightRatio * baseHeightRatio, paint);
 
         for (int i = 1; i < (MAX_DATA - MIN_DATA); i++) {

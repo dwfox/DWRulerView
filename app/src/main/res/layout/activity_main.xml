@@ -8,24 +8,45 @@
     tools:context="com.tistory.dwfox.dwrulerview.MainActivity">
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/rulerview_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbar_value"
+        android:gravity="center"
+        android:text="@string/dwfox_blog"
+        android:paddingLeft="25dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/seekbar_value"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:padding="10dp" />
+        android:text="@string/dwfox_git"
+        android:paddingBottom="10dp"
+        android:paddingLeft="25dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
 
     <com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker
         android:id="@+id/myScrollingValuePicker"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="97dp"
+        android:layout_above="@+id/center"
+        android:background="#ec6464"></com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker>
+
+    <LinearLayout
+        android:id="@+id/center"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
         android:layout_centerInParent="true"
-        android:background="#ec6464">
-    </com.tistory.dwfox.dwrulerviewlibrary.view.ScrollingValuePicker>
+        android:orientation="vertical"></LinearLayout>
 
     <com.tistory.dwfox.dwrulerviewlibrary.view.DWRulerSeekbar
+        android:id="@+id/dwRulerSeekbar"
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_alignParentBottom="true">
-    </com.tistory.dwfox.dwrulerviewlibrary.view.DWRulerSeekbar>
+        android:layout_height="97dp"
+        android:layout_below="@+id/center"></com.tistory.dwfox.dwrulerviewlibrary.view.DWRulerSeekbar>
 </RelativeLayout>

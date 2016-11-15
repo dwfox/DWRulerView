@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DWRulerView</string>
+    <string name="dwfox_git">https://github.com/dwfox/DWRulerView</string>
+    <string name="dwfox_blog">http://dwfox.tistory.com/50</string>
 </resources>
