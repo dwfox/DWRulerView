@@ -1,6 +1,6 @@
 DWRulerView
 =========
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Udy_ThDo5kw/0.jpg)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
+[![IMAGE ALT TEXT HERE](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
 ---
 <img src="screenshot/dwrulerview.gif"/>
 
@@ -58,3 +58,6 @@ dependencies {
 	  compile 'com.github.dwfox:DWRulerView:1.0.0'
 }
 ```
+
+### More
+[![More Usage Here]](http://dwfox.tistory.com/50)
