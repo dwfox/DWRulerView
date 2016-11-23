@@ -1,6 +1,6 @@
 DWRulerView
 =========
-[![IMAGE ALT TEXT HERE](screenshot/youtube_image.png")](http://www.youtube.com/watch?v=Udy_ThDo5kw)
+<img src="screenshot/youtube_image.png"/>
 ---
 <img src="screenshot/dwrulerview.gif"/>
 
