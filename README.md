@@ -3,6 +3,7 @@ DWRulerView
 [![IMAGE ALT TEXT HERE](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
 ---
 <img src="screenshot/dwrulerview.gif"/>
+<img src="screenshot/dwseekbar.gif"/>
 
 ### Usage
 ```java
