@@ -3,7 +3,6 @@ DWRulerView
 [![IMAGE ALT TEXT HERE](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
 ---
 <img src="screenshot/dwrulerview.gif"/>
-<img src="screenshot/youtube_image.png"/>
 
 ### Usage
 ```java
@@ -59,5 +58,5 @@ dependencies {
 }
 ```
 
-### More
+### More Usage 
 [More Usage Here](http://dwfox.tistory.com/50)
