@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-DWRulerView-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/4630)
+
 DWRulerView
 =========
 [![IMAGE ALT TEXT HERE](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
