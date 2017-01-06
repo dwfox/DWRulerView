@@ -78,7 +78,7 @@ allprojects {
 
 ```groovy
 dependencies {
-	  compile 'com.github.dwfox:DWRulerView:1.0.0'
+	  compile 'com.github.dwfox:DWRulerView:1.1.0'
 }
 ```
 ---
