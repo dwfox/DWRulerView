@@ -4,11 +4,17 @@ DWRulerView
 =========
 [![IMAGE ALT TEXT HERE](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
 ---
-<img src="screenshot/dwrulerview.gif"/>
+### Demo
+Ruler Number Picker & Ruler Seekbar
+
 <img src="screenshot/dwseekbar.gif"/>
 
+---
+
 ### Usage
+- Ruler Number Picker
 ```java
+ScrollingValuePicker myScrollingValuePicker;
 myScrollingValuePicker = (ScrollingValuePicker) findViewById(R.id.myScrollingValuePicker);
 myScrollingValuePicker.setViewMultipleSize(LINE_RULER_MULTIPLE_SIZE);
 myScrollingValuePicker.setMaxValue(MIN_VALUE, MAX_VALUE);
@@ -24,7 +30,23 @@ myScrollingValuePicker.getScrollView().setOnTouchListener(new View.OnTouchListen
 });
 ```
 
+- Ruler Seekbar
+```java
+DWRulerSeekbar dwRulerSeekbar;
+dwRulerSeekbar = (DWRulerSeekbar) findViewById(R.id.dwRulerSeekbar);
+dwRulerSeekbar
+        .setMinMaxValue((int) MIN_VALUE, (int) MAX_VALUE)
+        //Get the value with the OnDWSeekbarListener
+        .setDWRulerSeekbarListener(new DWRulerSeekbar.OnDWSeekBarListener() {
+            @Override
+            public void onStopSeekbarValue(int value) {
+                seekbarText.setText("DWSeekBar Value : " + value);
+            }
+        });
+```
+---
 ### Get Value
+- Ruler Number Picker
 ```java
 myScrollingValuePicker.setOnScrollChangedListener(new ObservableHorizontalScrollView.OnScrollChangedListener() {
 
@@ -42,7 +64,7 @@ myScrollingValuePicker.setOnScrollChangedListener(new ObservableHorizontalScroll
         }
     });
 ```
-
+---
 ### Gradle
 
 ```groovy
@@ -59,6 +81,6 @@ dependencies {
 	  compile 'com.github.dwfox:DWRulerView:1.0.0'
 }
 ```
-
-### More Usage 
+---
+### More Usage
 [More Usage Here](http://dwfox.tistory.com/50)
