@@ -2,12 +2,11 @@
 
 DWRulerView
 =========
-[![IMAGE ALT TEXT HERE](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
+[![Youtube](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
 ---
 ### Demo
 Ruler Number Picker & Ruler Seekbar
-
-<img src="screenshot/dwseekbar.gif"/>
+![Image](https://github.com/dwfox/DWRulerView/raw/master/screenshot/dwseekbar.gif)
 
 ---
 
@@ -83,4 +82,4 @@ dependencies {
 ```
 ---
 ### More Usage
-[More Usage Here](http://dwfox.tistory.com/50)
+More Usage Here [[link](http://dwfox.tistory.com/50)]
