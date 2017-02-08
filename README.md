@@ -5,7 +5,7 @@ DWRulerView
 [![Youtube](https://github.com/dwfox/DWRulerView/raw/master/screenshot/youtube_image.png)](http://www.youtube.com/watch?v=Udy_ThDo5kw)
 ---
 ### Demo
-Ruler Number Picker & Ruler Seekbar
+- Ruler Number Picker & Ruler Seekbar
 ![Image](https://github.com/dwfox/DWRulerView/raw/master/screenshot/dwseekbar.gif)
 
 ---
